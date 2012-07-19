@@ -14,7 +14,14 @@ end
 gem 'jquery-rails'
 
 group :test do
+	gem 'capybara'
+	gem 'launchy'
+	gem 'factory_girl_rails'
+end
+
+group :test, :development do
 	gem 'rspec-rails'
+ 	gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :development do
@@ -29,5 +36,3 @@ end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
