@@ -26,16 +26,19 @@ describe User do
 	it { should respond_to(:password_confirmation) }
 	it { should respond_to(:password_digest) }
 
-	# Tests should be written to verify more edge cases for passwords,
-	#  but there's only one user for now, so this is not 
 	describe "passwords are required" do
 		it 'should not accept a password of ""' do
 			@user.password = @user.password_confirmation = ""
 			should_not be_valid
 		end
-		it "should not accept a nill password" do
+		it "should not accept a nil password" do
 			@user.password = @user.password_confirmation = nil
 		end
+	end
+
+	specify "passwords must match" do
+		@user.password_confirmation = "different"
+		should_not be_valid
 	end
 
 	specify "name must be given" do
