@@ -25,8 +25,9 @@ describe User do
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
 	it { should respond_to(:password_digest) }
+	it { should respond_to(:authenticate) }
 
-	describe "passwords are required" do
+	context "passwords are required" do
 		it 'should not accept a password of ""' do
 			@user.password = @user.password_confirmation = ""
 			should_not be_valid
@@ -39,6 +40,25 @@ describe User do
 	specify "passwords must match" do
 		@user.password_confirmation = "different"
 		should_not be_valid
+	end
+
+	describe "user authentication" do
+		before { @user.save }
+		let(:found_user) { User.find_by_username("brent") }
+		
+		it "should authenticate with a matching password" do
+			@user.should == found_user.authenticate(@user.password)
+		end
+
+		context "with wrong password given" do
+			let(:with_invalid_pass) { found_user.authenticate("wrongPass") }
+			it "should not return the user" do
+				@user.should_not == with_invalid_pass
+			end
+			it "should return false as a failure" do
+				with_invalid_pass.should == false
+			end
+		end
 	end
 
 	specify "name must be given" do
