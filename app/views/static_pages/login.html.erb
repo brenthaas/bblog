@@ -1,0 +1,8 @@
+<h2>Login</h2>
+<div class="container-fluid">
+<%= simple_form_for @user, class: "form_vertical", url: root_url do |f| %>
+	<%= f.input :username %>
+	<%= f.input :password %>
+	<%= f.button :submit %>
+<% end %>
+</div>
