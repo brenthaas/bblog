@@ -6,6 +6,8 @@ class SessionsController < ApplicationController
 	def create
 		user = User.find_by_username(params[:user][:username])
 		if user && user.authenticate(params[:user][:password])
+			cookies.permanent[:user_token] = user.token
+			current_user = user
 			redirect_to user
 		else
 			flash[:error] = "Invalid credentials"

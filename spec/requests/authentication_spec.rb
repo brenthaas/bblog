@@ -36,7 +36,7 @@ describe "Authentication" do
   		end
 
   		it "displays a logout link" do
-  			should have_link("logout")
+  			should have_link("Log Out")
   		end
   	end
   end

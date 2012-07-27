@@ -8,14 +8,14 @@
 #  password_digest :string(255)
 #  created_at      :datetime        not null
 #  updated_at      :datetime        not null
+#  token           :string(255)
 #
 
 require 'spec_helper'
 
 describe User do
 	before do
-	  @user = User.new(name: "Brent Haas", username: "brent",
-	  								password: "foobar", password_confirmation: "foobar")
+	  @user = FactoryGirl.create(:user)
 	end
 	subject { @user }
 
@@ -26,6 +26,13 @@ describe User do
 	it { should respond_to(:password_confirmation) }
 	it { should respond_to(:password_digest) }
 	it { should respond_to(:authenticate) }
+	it { should respond_to(:token) }
+
+	describe "token creation" do
+		before { @user.save }
+
+		its(:token) {should_not be_empty}
+	end
 
 	context "passwords are required" do
 		it 'should not accept a password of ""' do
