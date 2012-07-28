@@ -16,5 +16,8 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
+		cookies.permanent[:user_token] = nil
+		current_user = nil
+		redirect_to root_path
 	end
 end
