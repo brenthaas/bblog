@@ -51,7 +51,7 @@ describe User do
 
 	describe "user authentication" do
 		before { @user.save }
-		let(:found_user) { User.find_by_username("brent") }
+		let(:found_user) { User.find_by_username(@user.username) }
 		
 		it "should authenticate with a matching password" do
 			@user.should == found_user.authenticate(@user.password)
@@ -92,7 +92,7 @@ describe User do
 			@newuser.should be_valid
 		end
 		it "duplicate usernames cannot be used" do
-			@newuser.username = "brent"
+			@newuser.username = @user.username
 			@newuser.should_not be_valid
 		end
 	end
