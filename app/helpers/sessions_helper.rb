@@ -12,6 +12,10 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+	def authorize_or_redirect!
+		redirect_to blogs_path, error: "Not Authorized!" unless logged_in?
+	end
+
 	private
 		def user_from_token
 			token = cookies[:user_token]
