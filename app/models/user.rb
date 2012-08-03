@@ -15,7 +15,10 @@ class User < ActiveRecord::Base
   attr_accessible :name, :username, 
   		:password_digest, :password, :password_confirmation,
   		:token
+      
   has_secure_password
+
+  has_many :blogs, dependent: :destroy
 
   validates :name, presence: true 
   validates :username, presence: true, uniqueness: { case_sensitive: true }

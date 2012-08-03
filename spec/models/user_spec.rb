@@ -68,32 +68,54 @@ describe User do
 		end
 	end
 
-	specify "name must be given" do
-		@user.name = ""
-		should_not be_valid
-	end
-
-	specify "username must be given" do
-		@user.username = ""
-		should_not be_valid
-	end
-
-	specify "passwords must be 6 characters long" do
-		@user.password = @user.password_confirmation = "12345"
-	end
-
-	describe "duplication" do
-		before do 
-			@user.save!
-			@newuser = User.new(name: "CopyCat", username: "copy", 
-											password: "blahblah", password_confirmation: "blahblah")
+	describe "field validation" do
+		specify "name must be given" do
+			@user.name = ""
+			should_not be_valid
 		end
-		it "unique fields are fine" do
-			@newuser.should be_valid
+		specify "username must be given" do
+			@user.username = ""
+			should_not be_valid
 		end
-		it "duplicate usernames cannot be used" do
-			@newuser.username = @user.username
-			@newuser.should_not be_valid
+		specify "passwords must be 6 characters long" do
+			@user.password = @user.password_confirmation = "12345"
+		end
+		describe "duplication" do
+			before do 
+				@user.save!
+				@newuser = FactoryGirl.create(:user)
+			end
+			it "unique fields are fine" do
+				@newuser.should be_valid
+			end
+			it "duplicate usernames cannot be used" do
+				@newuser.username = @user.username
+				@newuser.should_not be_valid
+			end
+		end
+
+		describe "blog entries" do
+			context "created out of order" do
+				# first created current post
+				let!(:new_post) do
+					FactoryGirl.create(:blog, user: @user,
+						posting_date: 2.days.ago, created_at: 2.days.ago ) 
+				end 
+				# newer creation, but old post
+				let!(:old_post) do
+					FactoryGirl.create(:blog, user: @user,
+						posting_date: 1.week.ago, created_at: Date.yesterday)
+				end
+				# created now - should be first
+				let!(:newest_post) do
+					FactoryGirl.create(:blog, user: @user,
+						posting_date: Time.now, created_at: Time.now)
+				end
+
+				it "will list newest first by posting_date" do
+					@user.blogs.should == [newest_post, new_post, old_post]
+				end
+			end
 		end
 	end
 end
