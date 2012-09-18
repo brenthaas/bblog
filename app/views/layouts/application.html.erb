@@ -9,11 +9,9 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
-<%= render 'layouts/messages' %>
+<%= render 'layouts/messages' unless flash.empty? %>
 
-<div class="container-fluid">
-	<%= yield %>
-</div>
+<%= yield %>
 
 </body>
 </html>
