@@ -11,4 +11,7 @@ Bblog::Application.routes.draw do
 
   # User
   match "users/:id", to: "users#show", as: :user
+
+  # Blogs
+  resources :blogs
 end
