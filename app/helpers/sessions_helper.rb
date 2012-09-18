@@ -12,8 +12,12 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+	# Any user logged in can post
 	def authorize_or_redirect!
-		redirect_to blogs_path, error: "Not Authorized!" unless logged_in?
+		unless logged_in?
+			flash[:error] = "Not Authorized!"
+			redirect_to blogs_path
+		end
 	end
 
 	private
