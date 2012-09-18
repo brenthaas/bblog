@@ -15,7 +15,9 @@ require 'spec_helper'
 
 describe User do
 	before do
-	  @user = FactoryGirl.create(:user)
+	  @user = User.create( name: 'Test User',
+	  										username: 'testuser',
+	  										password: 'foobar', password_confirmation: 'foobar' )
 	end
 	subject { @user }
 
