@@ -1,12 +1,12 @@
 // Clear all margins and padding
 * { margin: 0; padding: 0; }
+
 body { 
 	font: 1em Helvetica, Sans-Serif; 
 	line-height: 1.5em; 
-//	background: url(images/noise.jpg); 
 }
-.clear { clear: both; }
-#resume-wrap { 
+
+#resume { 
 	width: 50em; 
 	margin: 3em auto 4em; 
 }
@@ -14,43 +14,14 @@ body {
 	float: right; 
 	margin: -1em 2em 0 0; 
 }
-#title-name{ 
-	margin: 0 0 .2em 0; 
-	padding: 0 0 .2em 0; 
+#name{ 
+	margin: 0 0 .25em 0; 
+	padding: 0 0 .25em 0; 
 	font-size: 3em; 
 	font-weight: bold; 
-	letter-spacing: -.05em; 
+	letter-spacing: -.0625em; 
 	border-bottom: 1px solid #999; 
 }
-.section-head { 
-	margin: 0 0 .3em 0; 
-	position: relative; 
-	font-family: Georgia, Serif; 
-	font-size: 1.3em; 
-	color: #bbb; 
-	font-weight: bold; 
-}
-.sub-head  { 
-	position: absolute; 
-	bottom: 0; 
-	right: 0; 
-	font-style: italic; 
-	font-family: Georgia, Serif; 
-	font-size: 1em; 
-	color: #999; 
-	font-weight: normal; 
-}
-p { margin: 0 0 16px 0; }
-a { 
-	color: #999; 
-	text-decoration: none; 
-	border-bottom: 1px dotted #999; 
-}
-a:hover { 
-	border-bottom-style: solid; 
-	color: black; 
-}
-ul { margin: 0 0 32px 17px; }
 #objective { 
 	width: 500px; 
 	float: left; 
@@ -60,28 +31,67 @@ ul { margin: 0 0 32px 17px; }
 	font-style: italic; 
 	color: #666; 
 }
+.section-head { 
+	margin: 0 0 .25em 0; 
+	position: relative; 
+	font-family: Georgia, Serif; 
+	font-size: 1em; 
+	color: #999; 
+}
+.org {
+	font-size: 1.125em;
+	color: #bbb; 
+	font-weight: bold; 
+}
+.title  { 
+	font-style: italic; 
+	font-weight: normal; 
+}
+.date {
+	position: absolute;
+	bottom: 0; 
+	right: 0; 
+}
+p { margin: 0 0 1em 0; }
+a { 
+	color: #999; 
+	text-decoration: none; 
+	border-bottom: 1px dotted #999; 
+}
+a:hover { 
+	border-bottom-style: solid; 
+	color: black; 
+}
+.wins {
+	font: 1em Helvetica, Sans-Serif; 
+	line-height: 1.25em; 
+}
+ul.wins { margin: 0 0 2em 1em; }
 dt { 
 	font-style: italic; 
 	font-weight: bold; 
-	font-size: 18px; 
+	font-size: 1em; 
 	text-align: right; 
-	padding: 0 26px 0 0; 
+	padding: 0 1.625em 0 0; 
 	width: 8em; 
 	float: left; 
 	height: 3em; 
 	border-right: 1px solid #999;  
 }
 dd { 
-	width: 600px; 
+	width: 600px;
 	float: right; 
-}
-dd.clear { 
-	float: none; 
-	margin: 0; 
-	height: 15px; 
 }
 
 dd.school {
 	padding: 0 0 1em 0;
 }
 
+/* ---- Helper styling ---- */
+.clear { clear: both; }
+
+dd.clear { 
+	float: none; 
+	margin: 0; 
+	height: 10px; 
+}
