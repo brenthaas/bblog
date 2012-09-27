@@ -2,7 +2,6 @@
 
 body { 
 	font: 1em Helvetica, Sans-Serif; 
-	line-height: 1.5em; 
 }
 
 
@@ -27,10 +26,9 @@ dd.clear {
 	margin: -16px 32px 0 0; 
 }
 #name{ 
-	margin: 0 0 8px 0; 
-	padding: 0 0 8px 0; 
+	margin-bottom: 8px; 
 	font-size: 3em; 
-	font-weight: bold; 
+	font-weight: bold italic; 
 	letter-spacing: -2px; 
 	border-bottom: 1px solid #999; 
 }
@@ -49,16 +47,23 @@ dd.clear {
 #objective { 
 	width: 500px; 
 	float: left; 
-}
-p#objective  { 
 	font-family: Georgia, Serif; 
 	font-style: italic; 
 	color: #666; 
 	margin: 0 0 1em 0;
+	line-height: 1.5em; 
 }
-
+dd.section { 
+	width: 675px;
+	float: right; 
+}
+.entry {
+	padding-left: 25px;
+	margin-bottom: 10px;
+	border-left: 1px solid #999;  
+}
 .entry-head { 
-	margin: 0 0 .25em 0; 
+	margin-bottom: 4px;
 	position: relative; 
 	font-family: Georgia, Serif; 
 	font-size: 1em; 
@@ -66,21 +71,34 @@ p#objective  {
 }
 .org {
 	font-size: 1.125em;
-	color: #bbb; 
+	color: #aaa; 
 	font-weight: bold; 
+}
+.location {
+	width: 150px;
+	text-align: right;
+	font-style: italic;
+	position: absolute;
+	bottom: 0;
+	right: 120px;
 }
 .title  { 
 	font-style: italic; 
 	font-weight: normal; 
+	margin: 0 10px;
 }
 .date {
 	position: absolute;
+	text-align: right;
+	width: 100px;
 	bottom: 0; 
 	right: 0; 
 }
 .wins {
 	font: 1em Georgia, Serif; 
-	line-height: 1.25em; 
+}
+.win {
+	line-height: 1.25em;
 }
 dt.section-title { 
 	font-style: italic; 
@@ -91,15 +109,6 @@ dt.section-title {
 	width: 125px; 
 	float: left; 
 	height: 50px; 
-	border-right: 1px solid #999;  
-}
-dd.section { 
-	width: 660px;
-	float: right; 
-}
-
-.entry {
-	padding: 0 0 1em 0;
 }
 
 a { 
