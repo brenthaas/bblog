@@ -4,11 +4,7 @@ body {
 	font: 1em Helvetica, Sans-Serif; 
 }
 
-
-
 // reset margins (change custom.css)
-p { margin: 0; }
-
 .clear { clear: both; }
 
 dd.clear { 
@@ -19,22 +15,23 @@ dd.clear {
 
 #resume { 
 	width: 850px; 
-	margin: 48px auto 64px; 
+	margin: 50px auto 64px; 
 }
 #pic { 
 	float: right; 
 	margin: -16px 32px 0 0; 
 }
 #name{ 
-	margin-bottom: 8px; 
+	margin-bottom: 10px; 
+	padding-left: 25px;
 	font-size: 3em; 
-	font-weight: bold italic; 
+	font-weight: bold;
 	letter-spacing: -2px; 
 	border-bottom: 1px solid #999; 
 }
 #contact-info {
-	margin: 0 0 10px 0;
-	line-height: 1.25em;
+	margin-bottom: 10px;
+	line-height: 1em;
 }
 .contact-detail {
 	font-style: italic; 
@@ -56,11 +53,11 @@ dd.clear {
 dd.section { 
 	width: 675px;
 	float: right; 
+	border-left: 1px solid #999;  
 }
 .entry {
 	padding-left: 25px;
 	margin-bottom: 10px;
-	border-left: 1px solid #999;  
 }
 .entry-head { 
 	margin-bottom: 4px;
