@@ -10,6 +10,15 @@ $grayMediumLight: #eaeaea;
 box-sizing: border-box;
 }
 
+.imag_header {
+	background-color: #000;
+	background-image: url("/assets/header_CatBaIsland_panorama.jpg");
+	background-repeat: no-repeat;
+	width: 850px;
+	height: 180px;
+	margin: 20px auto;
+}
+
 .alert {
 	@include box_sizing;
 	text-align: center;

@@ -1,3 +1,5 @@
+@media print {.navbar { display: none; } }
+
 * { margin: 0; padding: 0; }
 
 body { 
@@ -14,6 +16,7 @@ dd.clear {
 }
 
 #resume { 
+	clear: both;
 	width: 850px; 
 	margin: 50px auto 64px; 
 }
