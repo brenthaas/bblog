@@ -6,6 +6,13 @@ body {
 	font: 1em Helvetica, Sans-Serif; 
 }
 
+#version{ 
+	font: 0.75em Georgia, Serif;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
 // reset margins (change custom.css)
 .clear { clear: both; }
 
