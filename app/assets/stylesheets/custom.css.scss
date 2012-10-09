@@ -10,7 +10,7 @@ $grayMediumLight: #eaeaea;
 box-sizing: border-box;
 }
 
-.imag_header {
+#blog_list_header {
 	background-color: #000;
 	background-image: url("/assets/header_CatBaIsland_panorama.jpg");
 	background-repeat: no-repeat;
@@ -28,8 +28,11 @@ box-sizing: border-box;
 html {
 	overflow-y: scroll;
 }
-body {
+#page_body {
+	width: 850px;
+	margin: 20px 40px;
 	padding-top: 40px;
+
 }
 section {
 	overflow: auto;
