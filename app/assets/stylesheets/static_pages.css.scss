@@ -51,14 +51,26 @@ dd.clear {
 	width: 75px; 
 	float: left; 
 }
-#objective { 
-	width: 500px; 
+p#objective { 
+	width: 70%; 
 	float: left; 
 	font-family: Georgia, Serif; 
 	font-style: italic; 
 	color: #666; 
 	margin: 0 0 1em 0;
 	line-height: 1.5em; 
+}
+.section{
+}
+dt.section-title { 
+	font-style: italic; 
+	font-weight: bold; 
+	font-size: 1em; 
+	text-align: right; 
+	padding: 0 25px 0 0; 
+	width: 125px; 
+	float: left; 
+	height: 50px; 
 }
 dd.section { 
 	width: 675px;
@@ -107,17 +119,6 @@ dd.section {
 .win {
 	line-height: 1.25em;
 }
-dt.section-title { 
-	font-style: italic; 
-	font-weight: bold; 
-	font-size: 1em; 
-	text-align: right; 
-	padding: 0 25px 0 0; 
-	width: 125px; 
-	float: left; 
-	height: 50px; 
-}
-
 a { 
 	color: #999; 
 	text-decoration: none; 
