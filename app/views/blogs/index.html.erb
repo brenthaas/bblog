@@ -1,21 +1,11 @@
-<h1>Listing blogs</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @blogs.each do |blog| %>
-  <tr>
-    <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Blog', new_blog_path %>
+<div id="blog_list_header">My Blogs</div>
+<%= link_to 'New Blog', new_blog_path, class: 'new_post' if logged_in? %>
+<div id="blog_list">
+  <% @blogs.each do |blog| %>
+    <div class='blog_post'> 
+      <h3 class='post_title'><%= link_to blog.title, blog_path(blog) %></h3>
+      <p class='post_summary'><%= blog.content[0,500] %></p>
+      <%= render 'options', blog: blog if logged_in? %>
+    </div>
+  <% end %>
+</div>

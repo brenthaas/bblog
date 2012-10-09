@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<div class="blog_post">
+	<h2 class="blog_title"><%= @blog.title %></h2>
+	<p class="blog_content"><%= @blog.content %></p>
+	<%= render 'options', blog: @blog if logged_in? %>
+</div>

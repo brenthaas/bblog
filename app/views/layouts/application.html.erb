@@ -11,7 +11,9 @@
 <%= render 'layouts/header' %>
 <%= render 'layouts/messages' unless flash.empty? %>
 
-<%= yield %>
+<div id="page_body">
+	<%= yield %>
+</div>
 
 </body>
 </html>
