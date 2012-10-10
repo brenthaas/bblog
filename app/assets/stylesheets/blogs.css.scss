@@ -2,8 +2,8 @@ $blogGray: #999;
 $fieldSize: 60%;
 
 // ---- new blog form ----
-form.new_blog {
-	.form_inputs {
+.blog-form {
+	.form-inputs {
 		margin: 0 auto;
 	}
 	#blog_title {
@@ -35,21 +35,27 @@ form.new_blog {
 		width: 100%;
 		clear: both;
 	}
-	.blog_post {
-		margin-bottom: 16px;
-	}
+}
+.blog_post {
+	margin-bottom: 16px;
+
 	.post_title {
 		color: $blogGray;
 		font-size: 18px;
 		font-weight: bold;
 		line-height: 24px;
 		font-style: bold;
+		margin-bottom: 5px;
 		.post_date {
 			font-size: 16px;
 			font-style: italic;
 			font-weight: normal;
 			float: right;
 		}
+	}
+	img {
+		display: block;
+		margin: 16px auto;
 	}
 	a { 
 		color: $blogGray;

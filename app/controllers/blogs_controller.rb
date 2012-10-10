@@ -35,6 +35,14 @@ class BlogsController < ApplicationController
   # PUT /blogs/1
   def update
     @blog = Blog.find(params[:id])
+    @blog.title = params[:blog][:title]
+    @blog.content = params[:blog][:content]
+    #@blog.date = params[:blog][:date]
+    if @blog.save
+      redirect_to @blog, message: "Blog successfully updated!"
+    else
+      render action: 'new', message: "Problem updating blog..."
+    end
   end
 
   # DELETE /blogs/1
