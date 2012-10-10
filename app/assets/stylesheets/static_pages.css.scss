@@ -1,130 +1,123 @@
-@media print {.navbar { display: none; } }
-
-* { margin: 0; padding: 0; }
-
-body { 
-	font: 1em Helvetica, Sans-Serif; 
-}
-
-#version{ 
-	font: 0.75em Georgia, Serif;
-	position: fixed;
-	right: 0;
-	bottom: 0;
-}
-
-// reset margins (change custom.css)
-.clear { clear: both; }
-
-dd.clear { 
-	float: none; 
-	margin: 0; 
-	height: 10px; 
-}
-
-#resume { 
+#resume {
 	clear: both;
 	width: 850px; 
 	margin: 50px auto 64px; 
-}
-#pic { 
-	float: right; 
-	margin: -16px 32px 0 0; 
-}
-#name{ 
-	margin-bottom: 10px; 
-	padding-left: 25px;
-	font-size: 3em; 
-	font-weight: bold;
-	letter-spacing: -2px; 
-	border-bottom: 1px solid #999; 
-}
-#contact-info {
-	margin-bottom: 10px;
-	line-height: 1em;
-}
-.contact-detail {
-	font-style: italic; 
-	font-weight: bold; 
-	text-align: right; 
-	padding: 0 10px 0 0; 
-	width: 75px; 
-	float: left; 
-}
-p#objective { 
-	width: 70%; 
-	float: left; 
-	font-family: Georgia, Serif; 
-	font-style: italic; 
-	color: #666; 
-	margin: 0 0 1em 0;
-	line-height: 1.5em; 
-}
-.section{
-}
-dt.section-title { 
-	font-style: italic; 
-	font-weight: bold; 
-	font-size: 1em; 
-	text-align: right; 
-	padding: 0 25px 0 0; 
-	width: 125px; 
-	float: left; 
-	height: 50px; 
-}
-dd.section { 
-	width: 675px;
-	float: right; 
-	border-left: 1px solid #999;  
-}
-.entry {
-	padding-left: 25px;
-	margin-bottom: 10px;
-}
-.entry-head { 
-	margin-bottom: 4px;
-	position: relative; 
-	font-family: Georgia, Serif; 
-	font-size: 1em; 
-	color: #999; 
-}
-.org {
-	font-size: 1.125em;
-	color: #aaa; 
-	font-weight: bold; 
-}
-.location {
-	width: 150px;
-	text-align: right;
-	font-style: italic;
-	position: absolute;
-	bottom: 0;
-	right: 120px;
-}
-.title  { 
-	font-style: italic; 
-	font-weight: normal; 
-	margin: 0 10px;
-}
-.date {
-	position: absolute;
-	text-align: right;
-	width: 100px;
-	bottom: 0; 
-	right: 0; 
-}
-.wins {
-	font: 1em Georgia, Serif; 
-}
-.win {
-	line-height: 1.25em;
-}
-a { 
-	color: #999; 
-	text-decoration: none; 
-	border-bottom: 1px dotted #999; 
-}
-a:hover { 
-	border-bottom-style: solid; 
-	color: black; 
-}
+
+	#version{ 
+		font: 0.75em Georgia, Serif;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+	}
+
+	// reset margins (change custom.css)
+	.clear { clear: both; }
+
+	dd.clear { 
+		float: none; 
+		margin: 0; 
+		height: 10px; 
+	}
+
+	#pic { 
+		float: right; 
+		margin: -16px 32px 0 0; 
+	}
+	#name{ 
+		margin-bottom: 10px; 
+		padding-left: 25px;
+		font-size: 3em; 
+		font-weight: bold;
+		letter-spacing: -2px; 
+		border-bottom: 1px solid #999; 
+	}
+	#contact-info {
+		margin-bottom: 10px;
+		line-height: 1em;
+	}
+	.contact-detail {
+		font-style: italic; 
+		font-weight: bold; 
+		text-align: right; 
+		padding: 0 10px 0 0; 
+		width: 75px; 
+		float: left; 
+	}
+	p#objective { 
+		width: 70%; 
+		float: left; 
+		font-family: Georgia, Serif; 
+		font-style: italic; 
+		color: #666; 
+		margin: 0 0 1em 0;
+		line-height: 1.5em; 
+	}
+	.section{
+	}
+	dt.section-title { 
+		font-style: italic; 
+		font-weight: bold; 
+		font-size: 1em; 
+		text-align: right; 
+		padding: 0 25px 0 0; 
+		width: 125px; 
+		float: left; 
+		height: 50px; 
+	}
+	dd.section { 
+		width: 675px;
+		float: right; 
+		border-left: 1px solid #999;  
+	}
+	.entry {
+		padding-left: 25px;
+		margin-bottom: 10px;
+	}
+	.entry-head { 
+		margin-bottom: 4px;
+		position: relative; 
+		font-family: Georgia, Serif; 
+		font-size: 1em; 
+		color: #999; 
+	}
+	.org {
+		font-size: 1.125em;
+		color: #aaa; 
+		font-weight: bold; 
+	}
+	.location {
+		width: 150px;
+		text-align: right;
+		font-style: italic;
+		position: absolute;
+		bottom: 0;
+		right: 120px;
+	}
+	.title  { 
+		font-style: italic; 
+		font-weight: normal; 
+		margin: 0 10px;
+	}
+	.date {
+		position: absolute;
+		text-align: right;
+		width: 100px;
+		bottom: 0; 
+		right: 0; 
+	}
+	.wins {
+		font: 1em Georgia, Serif; 
+	}
+	.win {
+		line-height: 1.25em;
+	}
+	a { 
+		color: #999; 
+		text-decoration: none; 
+		border-bottom: 1px dotted #999; 
+	}
+	a:hover { 
+		border-bottom-style: solid; 
+		color: black; 
+	}
+} //end #resume

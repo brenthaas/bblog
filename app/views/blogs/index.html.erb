@@ -1,11 +1,18 @@
-<div id="blog_list_header">My Blogs</div>
-<%= link_to 'New Blog', new_blog_path, class: 'new_post' if logged_in? %>
-<div id="blog_list">
-  <% @blogs.each do |blog| %>
-    <div class='blog_post'> 
-      <h3 class='post_title'><%= link_to blog.title, blog_path(blog) %></h3>
-      <p class='post_summary'><%= blog.content[0,500] %></p>
-      <%= render 'options', blog: blog if logged_in? %>
-    </div>
-  <% end %>
+<div id="blogs">
+  <div id="blog_list_header"></div>
+  <%= link_to 'New Blog', new_blog_path, class: 'new_post_link' if logged_in? %>
+  <div id="blog_list">
+    <% @blogs.each do |blog| %>
+      <div class='blog_post'> 
+        <div class='post_title'><%= link_to blog.title, blog_path(blog) %>
+          <span class='post_date'><%= blog.posting_date.strftime("%B %d, %y") %></span>
+        </div>
+        <p class='post_summary'>
+          <%= blog.content %>
+          <%= link_to '...', blog_path(blog) %>
+        </p>
+        <%= render 'options', blog: blog if logged_in? %>
+      </div>
+    <% end %>
+  </div>
 </div>

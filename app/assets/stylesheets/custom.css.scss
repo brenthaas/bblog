@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+@media print {.navbar { display: none; } }
+
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
 
@@ -10,15 +12,6 @@ $grayMediumLight: #eaeaea;
 box-sizing: border-box;
 }
 
-#blog_list_header {
-	background-color: #000;
-	background-image: url("/assets/header_CatBaIsland_panorama.jpg");
-	background-repeat: no-repeat;
-	width: 850px;
-	height: 180px;
-	margin: 20px auto;
-}
-
 .alert {
 	@include box_sizing;
 	text-align: center;
@@ -27,6 +20,12 @@ box-sizing: border-box;
 /* universal */
 html {
 	overflow-y: scroll;
+}
+
+* { margin: 0; padding: 0; }
+
+body { 
+	font: 1em Georgia, serif; 
 }
 #page_body {
 	width: 850px;
