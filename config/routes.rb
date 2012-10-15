@@ -1,8 +1,8 @@
 Bblog::Application.routes.draw do
   # Static Pages
-  match "home", to: "static_pages#home"
+  match "home", to: "blogs#index"
   match "about", to: "static_pages#about"
-  root to: "static_pages#home"
+  root to: "blogs#index"
 
   # Authentication actions
   match 'sessions', to: 'sessions#create', via: :post
