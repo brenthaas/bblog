@@ -1,3 +1,5 @@
+@media print {#resume { margin-top: 0; } }
+
 #resume {
 	clear: both;
 	width: 850px; 
@@ -10,8 +12,6 @@
 		bottom: 0;
 	}
 
-	// reset margins (change custom.css)
-	.clear { clear: both; }
 
 	dd.clear { 
 		float: none; 
@@ -21,7 +21,7 @@
 
 	#pic { 
 		float: right; 
-		margin: -16px 32px 0 0; 
+		margin-top: -16px; 
 	}
 	#name{ 
 		margin-bottom: 10px; 
@@ -52,9 +52,8 @@
 		margin: 0 0 1em 0;
 		line-height: 1.5em; 
 	}
-	.section{
-	}
 	dt.section-title { 
+		clear: both;
 		font-style: italic; 
 		font-weight: bold; 
 		font-size: 1em; 
