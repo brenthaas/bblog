@@ -1,9 +1,13 @@
-@media print {#resume { margin-top: 0; } }
+@media print {
+	#resume { margin-top: 0; } 
+	#version { display: none;}
+}
 
 #resume {
 	clear: both;
 	width: 850px; 
 	margin: 50px auto 64px; 
+	*{margin:0;}
 
 	#version{ 
 		font: 0.75em Georgia, Serif;
@@ -34,6 +38,7 @@
 	#contact-info {
 		margin-bottom: 10px;
 		line-height: 1em;
+		p { margin-bottom: 10px;}
 	}
 	.contact-detail {
 		font-style: italic; 
@@ -44,12 +49,12 @@
 		float: left; 
 	}
 	p#objective { 
-		width: 70%; 
+		width: 75%; 
 		float: left; 
 		font-family: Georgia, Serif; 
 		font-style: italic; 
 		color: #666; 
-		margin: 0 0 1em 0;
+		margin: 0 0 15px 0;
 		line-height: 1.5em; 
 	}
 	dt.section-title { 
@@ -67,10 +72,14 @@
 		width: 675px;
 		float: right; 
 		border-left: 1px solid #999;  
+		margin-bottom: 15px;
 	}
 	.entry {
 		padding-left: 25px;
 		margin-bottom: 10px;
+	}
+	div.entry:last-child {
+		margin: 0;
 	}
 	.entry-head { 
 		margin-bottom: 4px;
@@ -104,8 +113,8 @@
 		bottom: 0; 
 		right: 0; 
 	}
-	.wins {
-		font: 1em Georgia, Serif; 
+	ul.wins {
+		margin-left: 25px;
 	}
 	.win {
 		line-height: 1.25em;
