@@ -1,11 +1,12 @@
 require 'spec_helper'
 
 describe "blogs/show" do
-  before(:each) do
-    @blog = assign(:blog, stub_model(Blog))
-  end
+	let!(:blog) { assign(:blog, FactoryGirl.create(:blog)) }
 
-  it "renders attributes in <p>" do
-    render
+  describe "blog details" do
+  	before { render }
+  	it "shows the full blog title" do
+  		rendered.should have_content(blog.title)
+  	end
   end
 end

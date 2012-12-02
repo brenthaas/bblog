@@ -1,14 +1,10 @@
 require 'spec_helper'
 
 describe "blogs/index" do
-  before(:each) do
-    @blogs = [ FactoryGirl.create(:blog, title: "TestBlog 1"),
-    					FactoryGirl.create(:blog, title: "TestBlog 2") ]
-  end
+	before { @blogs = FactoryGirl.create_list(:blog, 5) }
 
   it "renders a list of blogs" do
     render 
-
-    rendered.should have_selector('h3', class: "post_title", count: @blogs.count)
+    assert_select "div.blog_post", count: @blogs.count
   end
 end
