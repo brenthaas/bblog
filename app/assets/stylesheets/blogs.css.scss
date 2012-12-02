@@ -53,6 +53,14 @@ $fieldSize: 60%;
 			float: right;
 		}
 	}
+	.image_caption {
+		position: relative;
+		display: block;
+		font-size: 12px;
+		text-align: center;
+		margin: 5px auto;
+	}
+
 	img {
 		display: block;
 		margin: 16px auto;
@@ -65,13 +73,6 @@ $fieldSize: 60%;
 		border-bottom: 1px dotted $blogGray;
 		color: black; 
 	}
-}
-
-.thumbnail-caption {
-	display: block;
-	font-size: 12px;
-	text-align: center;
-	margin: 5px auto;
 }
 
 .post_summary {
