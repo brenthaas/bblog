@@ -3,78 +3,78 @@ $fieldSize: 60%;
 
 // ---- new blog form ----
 .blog-form {
-	.form-inputs {
-		margin: 0 auto;
-	}
-	#blog_title {
-		width: $fieldSize;
-	}
-	#blog_content {
-		width: $fieldSize;
-	}
+  .form-inputs {
+    margin: 0 auto;
+  }
+  #blog_title {
+    width: $fieldSize;
+  }
+  #blog_content {
+    width: $fieldSize;
+  }
 }
 
 // ---- index blog display ----
 #blogs {
-	width: 850px;
-	margin: 40px auto;
+  width: 850px;
+  margin: 40px auto;
 
-	#blog_list_header {
-		background-color: #000;
-		background-image: url("/assets/header_CatBaIsland_panorama.jpg");
-		background-repeat: no-repeat;
-		width: 850px;
-		height: 170px;
-		margin: 20px auto;
-	}
-	.new_post_link { 
-		float: right;
-		margin-right: 10px;
-	}
-	#blog_list {
-		width: 100%;
-		clear: both;
-	}
+  #blog_list_header {
+    background-color: #000;
+    background-image: url("/assets/header_CatBaIsland_panorama.jpg");
+    background-repeat: no-repeat;
+    width: 850px;
+    height: 170px;
+    margin: 20px auto;
+  }
+  .new_post_link { 
+    float: right;
+    margin-right: 10px;
+  }
+  #blog_list {
+    width: 100%;
+    clear: both;
+  }
 }
 .blog_post {
-	margin-bottom: 16px;
+  margin: 15px 10px;
 
-	.post_title {
-		color: $blogGray;
-		font-size: 18px;
-		font-weight: bold;
-		line-height: 24px;
-		font-style: bold;
-		margin-bottom: 5px;
-		.post_date {
-			font-size: 16px;
-			font-style: italic;
-			font-weight: normal;
-			float: right;
-		}
-	}
-	.image_caption {
-		position: relative;
-		display: block;
-		font-size: 12px;
-		text-align: center;
-		margin: 5px auto;
-	}
+  .post_title {
+    color: $blogGray;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
 
-	img {
-		display: block;
-		margin: 16px auto;
-	}
-	a { 
-		color: $blogGray;
-		text-decoration: none; 
-	}
-	a:hover { 
-		border-bottom: 1px dotted $blogGray;
-		color: black; 
-	}
+    .post_date {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: normal;
+      float: right;
+    }
+  }
+  p {
+    margin: 10px 0;
+  }
+  .image_in_post {
+    display: block;
+    text-align: center;
+
+    .image_caption {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+    }
+    a { 
+      color: $blogGray;
+      text-decoration: none; 
+    }
+    a:hover { 
+      border-bottom: 1px dotted $blogGray;
+      color: black; 
+    }
+  }
 }
 
 .post_summary {
-	margin: 5px 10px;
+  margin: 5px 10px;
 }
