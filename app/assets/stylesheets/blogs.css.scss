@@ -17,7 +17,7 @@ $fieldSize: 60%;
 // ---- index blog display ----
 #blogs {
   width: 850px;
-  margin: 40px auto;
+  margin: 50px auto;
 
   #blog_list_header {
     background-color: #000;
@@ -64,14 +64,15 @@ $fieldSize: 60%;
       text-align: center;
       font-size: 12px;
     }
-    a { 
-      color: $blogGray;
-      text-decoration: none; 
-    }
-    a:hover { 
-      border-bottom: 1px dotted $blogGray;
-      color: black; 
-    }
+  }
+  
+  a { 
+    color: $blogGray;
+    text-decoration: none; 
+  }
+  a:hover { 
+    border-bottom: 1px dotted $blogGray;
+    color: black; 
   }
 }
 

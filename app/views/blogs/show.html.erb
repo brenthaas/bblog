@@ -1,11 +1,3 @@
 <div id='blogs'>
-	<div class='blog_post'> 
-	  <div class='post_title'> <%= @blog.title %>
-	    <span class='post_date'><%= @blog.posting_date.strftime("%B %d, %Y") %></span>
-	  </div>
-	  <p class='post_content'>
-	    <%=raw @blog.content %>
-	  </p>
-	  <%= render 'options', blog: @blog if logged_in? %>
-	</div>
+  <%= render @blog %>
 </div>
