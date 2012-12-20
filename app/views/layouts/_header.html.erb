@@ -4,6 +4,7 @@
 			<%= link_to "Low-Key Travels", home_path, id: 'logo' %>
 				<ul class="nav pull-right">
           <li><%= link_to "Blog", blogs_path %></li>
+          <li><%= link_to "Dev Notes", notes_path %></li>
   				<li><%= link_to "About me", about_path %></li>
   				<% if logged_in? %>
   					<li><%= link_to "Log Out", logout_path, method: :delete %></li>
