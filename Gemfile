@@ -24,11 +24,13 @@ end
 
 group :test, :development do
   gem 'shoulda-matchers'
+  gem 'spork-rails'
   gem 'rspec-rails'
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :development do
+  gem 'rerun'
   gem 'sqlite3'
   gem 'annotate', '~> 2.4.1.beta'
 end

@@ -5,3 +5,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 Bblog::Application.load_tasks
+
+desc "run spork (via rerun)"
+task :spork do
+  sh "rerun --pattern '{Gemfile,Gemfile.lock,spec/spec_helper.rb,.rspec,spec/factories/*.rb,config/environment.rb,config/environments/test.rb,config/initializers/*.rb,lib/**/*.rb}' -- spork"
+end
