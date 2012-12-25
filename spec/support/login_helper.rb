@@ -1,8 +1,8 @@
 module LoginHelper
-  def login_with(user, pass='password')
+  def login_with(user)
     visit login_path
-    fill_in "Username", with: user
-    fill_in "Password", with: pass
+    fill_in "Username", with: user.username
+    fill_in "Password", with: user.password
     click_button "login"
   end
 
