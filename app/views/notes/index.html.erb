@@ -1,0 +1,7 @@
+<div class="notes_list">
+  <% @notes.each do |note| %>
+    <div class="note">
+      <%= link_to note.name, note_url(note) %>
+    </div>
+  <% end %>
+</div>
