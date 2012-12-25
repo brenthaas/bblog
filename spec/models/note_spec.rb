@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe Note do
-  let (:note) { Notes.create!(
+  let (:user) { FactoryGirl.create(:user) }
+  let (:note) { user.notes.build(
                     title: "Test",
                     content: "This is where interesting notes go"
               )}
