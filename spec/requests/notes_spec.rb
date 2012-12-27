@@ -11,11 +11,22 @@ describe "notes" do
   end
   describe "index" do
     context "when user is logged in" do
-      before { login_with(user) }
-      it "displays a link to make a new blog" do
+      before do
+        login_with(user)
         visit notes_path
+      end 
+      it "displays a link to make a new blog" do
         page.should have_link("New Note", :href => new_note_path)
       end
+    end
+  end
+  describe "show" do
+    before { visit note_path(note) }
+    it "displays the note title" do
+      page.should have_content(note.title)
+    end
+    it "displays the note content" do
+      page.should have_content(note.content)
     end
   end
 end

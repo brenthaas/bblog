@@ -15,6 +15,10 @@ describe NotesController do
     end
   end
   context "when no user is logged in" do
+    it "assigns the requested user to show" do
+      get :show, :id => note.id
+      assigns(:note).should == note
+    end
     it "redirects when getting new" do
       get :new
       response.should redirect_to blogs_path
