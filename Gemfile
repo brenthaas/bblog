@@ -26,7 +26,7 @@ group :test, :development do
   gem 'shoulda-matchers'
   gem 'spork-rails'
   gem 'rspec-rails'
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'debugger', :require => 'debugger'
 end
 
 group :development do
