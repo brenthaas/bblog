@@ -1,10 +1,10 @@
-<div class='blog_post'> 
+<div class='post'> 
   <div class='post_title'> 
     <%= link_to blog.title, blog %>
     <span class='post_date'><%= blog.posting_date.strftime("%B %d, %Y") %></span>
   </div>
-  <p class='post_content'>
+  <div class='post_content'>
     <%=raw blog.content %>
-  </p>
+  </div>
 </div>
 <%= render 'options', blog: blog if logged_in? %>

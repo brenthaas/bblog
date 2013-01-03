@@ -1,25 +1,25 @@
-$blogGray: #999;
+$postGray: #999;
 $fieldSize: 60%;
 
-// ---- new blog form ----
-.blog-form {
+// ---- new post form ----
+.post-form {
   .form-inputs {
     margin: 0 auto;
   }
-  #blog_title {
+  #post_title {
     width: $fieldSize;
   }
-  #blog_content {
+  #post_content {
     width: $fieldSize;
   }
 }
 
-// ---- index blog display ----
-#blogs {
+// ---- index post display ----
+.posts {
   width: 850px;
   margin: 50px auto;
 
-  #blog_list_header {
+  .post_list_header {
     background-color: #000;
     background-image: url("/assets/header_CatBaIsland_panorama.jpg");
     background-repeat: no-repeat;
@@ -31,16 +31,16 @@ $fieldSize: 60%;
     float: right;
     margin-right: 10px;
   }
-  #blog_list {
+  .post_list {
     width: 100%;
     clear: both;
   }
 }
-.blog_post {
+.post {
   margin: 15px 10px;
 
   .post_title {
-    color: $blogGray;
+    color: $postGray;
     font-size: 18px;
     font-weight: bold;
     line-height: 24px;
@@ -51,6 +51,9 @@ $fieldSize: 60%;
       font-weight: normal;
       float: right;
     }
+  }
+  .post_content {
+    margin: 10px auto;
   }
   p {
     margin: 10px 0;
@@ -67,11 +70,11 @@ $fieldSize: 60%;
   }
   
   a { 
-    color: $blogGray;
+    color: $postGray;
     text-decoration: none; 
   }
   a:hover { 
-    border-bottom: 1px dotted $blogGray;
+    border-bottom: 1px dotted $postGray;
     color: black; 
   }
 }
