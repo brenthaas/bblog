@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.11'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'client_side_validations'
@@ -23,10 +23,14 @@ group :test do
 end
 
 group :test, :development do
+  gem 'shoulda-matchers'
+  gem 'spork-rails'
   gem 'rspec-rails'
+  gem 'debugger', :require => 'debugger'
 end
 
 group :development do
+  gem 'rerun'
   gem 'sqlite3'
   gem 'annotate', '~> 2.4.1.beta'
 end

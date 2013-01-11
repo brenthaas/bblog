@@ -1,0 +1,10 @@
+<div class="notes">
+  <%= link_to 'New Note', new_note_path, class: "new_note_link" if logged_in? %>
+  <div class="notes_list">
+    <% @notes.each do |note| %>
+      <div class="note_entry">
+        <%= link_to note.title, note_url(note) %>
+      </div>
+    <% end %>
+  </div>
+</div>
