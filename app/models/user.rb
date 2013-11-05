@@ -1,4 +1,4 @@
-# == Schema Information
+== Schema Information
 #
 # Table name: users
 #
@@ -12,15 +12,15 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :username, 
-  		:password_digest, :password, :password_confirmation,
-  		:token
-      
+  attr_accessible :name, :username,
+      :password_digest, :password, :password_confirmation,
+      :token
+
   has_secure_password
 
   has_many :blogs, dependent: :destroy
 
-  validates :name, presence: true 
+  validates :name, presence: true
   validates :username, presence: true, uniqueness: { case_sensitive: true }
   validates :password, presence: true, length: { minimum: 6 }
 
@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   before_save :create_user_token
 
   private
-  	def create_user_token
-			self.token = SecureRandom.urlsafe_base64
-		end
+    def create_user_token
+      self.token = SecureRandom.urlsafe_base64
+    end
 end
