@@ -6,6 +6,8 @@ set :stage, :production
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 role :app, %w{devops@bblog.lowkeysoftware.com}
+role :web, %w{devops@bblog.lowkeysoftware.com}
+role :db,  %w{devops@bblog.lowkeysoftware.com}
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +17,7 @@ role :app, %w{devops@bblog.lowkeysoftware.com}
 # extended properties on the server.
 server 'bblog.lowkeysoftware.com',
         user: 'devops',
-        roles: %w{app},
+        roles: %w{web app db},
         ssh_options: {
           user: 'devops',
           keys: %w(/Users/loquie/.ssh/loquiekey.pem),

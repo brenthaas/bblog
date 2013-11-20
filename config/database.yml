@@ -20,6 +20,9 @@ test:
 
 production:
   adapter: mysql2
+  encoding: utf8
   database: bblog_production
+  username: bblog
+  password: pimpmycloset01
   pool: 5
   timeout: 5000

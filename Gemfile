@@ -30,7 +30,13 @@ end
 group :development do
   gem 'annotate', '~> 2.5.0'
   gem 'capistrano', '~> 3.0.0'
+  gem 'capistrano-rails', '~> 1.1.0'
   gem 'capistrano-bundler'
+end
+
+group :assets do
+  gem 'uglifier'
+  gem 'therubyracer'
 end
 
 # To use ActiveModel has_secure_password

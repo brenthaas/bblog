@@ -15,6 +15,8 @@ set :default_env, {
   'PATH' => "/opt/rbenv/shims/:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 }
 
+set :bundle_binstubs, -> { shared_path.join('bin') }
+
 namespace :deploy do
   task :start do
     on roles(:app) do
