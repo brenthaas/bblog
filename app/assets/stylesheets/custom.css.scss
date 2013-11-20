@@ -1,9 +1,11 @@
-@import "bootstrap";
 
 @media print {.navbar { display: none; } }
 
 /* mixins, variables, etc. */
+$gray: #aaaaaa;
 $grayMediumLight: #eaeaea;
+$grayLight: #eeeeee;
+$grayDarker: #999999;
 
 /* make sure boxes come up with a border */
 @mixin box_sizing {
