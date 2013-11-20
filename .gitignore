@@ -15,4 +15,5 @@
 /tmp
 
 # Ignore binstubs
-/bin
+# Removing as per Rails 4 upgrade
+#/bin

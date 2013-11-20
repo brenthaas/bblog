@@ -12,7 +12,7 @@ set :user, 'devops'
 set :format, :pretty
 
 set :default_env, {
-  'PATH' => "/opt/rbenv/shims/:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+  'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH:/opt/rbenv/shims/"
 }
 
 set :bundle_binstubs, -> { shared_path.join('bin') }
