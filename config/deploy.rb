@@ -11,17 +11,27 @@ set :user, 'devops'
 
 set :format, :pretty
 
+set :default_env, {
+  'PATH' => "/opt/rbenv/shims/:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+}
+
 namespace :deploy do
   task :start do
-    execute :sv, "up bblog"
+    on roles(:app) do
+      execute :sv, "up bblog"
+    end
     # run "sudo sv up bblog"
   end
   task :stop do
-    execute :sv, "down bblog"
+    on roles(:app) do
+      execute :sv, "down bblog"
+    end
     # run "sudo sv down bblog"
   end
   task :restart do
-    execute :sv, "restart bblog"
+    on roles(:app) do
+      execute "sudo /usr/bin/env sv restart bblog"
+    end
     # run "sudo sv restart bblog"
   end
   after :finishing, 'deploy:cleanup'

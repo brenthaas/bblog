@@ -5,9 +5,7 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{devops@54.241.35.136}
-role :web, %w{devops@54.241.35.136}
-role :db,  %w{devops@54.241.35.136}
+role :app, %w{devops@bblog.lowkeysoftware.com}
 
 # Extended Server Syntax
 # ======================
@@ -15,13 +13,20 @@ role :db,  %w{devops@54.241.35.136}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '54.241.35.136',
+server 'bblog.lowkeysoftware.com',
         user: 'devops',
-        roles: %w{web app db},
+        roles: %w{app},
         ssh_options: {
           user: 'devops',
           keys: %w(/Users/loquie/.ssh/loquiekey.pem),
           auth_methods: %w(publickey)
         }
+
+desc "Report Uptimes"
+task :uptime do
+  on roles(:all) do |host|
+    info "Host #{host} (#{host.roles.join(', ')}):\t#{capture(:uptime)}"
+  end
+end
 
 # fetch(:default_env).merge!(rails_env: :production)

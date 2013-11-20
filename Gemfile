@@ -11,6 +11,8 @@ gem 'client_side_validations-simple_form'
 
 gem 'jquery-rails'
 
+gem 'unicorn'
+
 group :test do
   gem 'capybara'
   gem 'launchy'
@@ -26,13 +28,14 @@ end
 
 group :development do
   gem 'annotate', '~> 2.5.0'
+  gem 'capistrano', '~> 3.0.0'
+  gem 'capistrano-bundler'
 end
 
 group :production do
-  gem 'pg'
+  gem 'mysql2'
 end
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
-gem 'capistrano', group: :development
