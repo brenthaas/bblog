@@ -13,27 +13,24 @@ gem 'jquery-rails'
 
 gem 'unicorn'
 
+gem 'mysql2'
+
 group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 2.4.0'
+  gem 'rspec-rails'
 end
 
 group :test, :development do
-  gem 'shoulda-matchers', '~> 2.4.0'
-  gem 'rspec-rails'
   gem 'jazz_hands'
-  gem 'sqlite3'
 end
 
 group :development do
   gem 'annotate', '~> 2.5.0'
   gem 'capistrano', '~> 3.0.0'
   gem 'capistrano-bundler'
-end
-
-group :production do
-  gem 'mysql2'
 end
 
 # To use ActiveModel has_secure_password
