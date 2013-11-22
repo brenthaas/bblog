@@ -22,7 +22,6 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
   validates :username, presence: true, uniqueness: { case_sensitive: true }
-  validates :password, presence: true, length: { minimum: 6 }
 
   before_save { |user| user.username = username.downcase }
   before_save :create_user_token
