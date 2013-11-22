@@ -37,6 +37,7 @@ end
 group :assets do
   gem 'uglifier'
   gem 'therubyracer'
+  gem 'turbo-sprockets-rails3'
 end
 
 # To use ActiveModel has_secure_password
