@@ -5,9 +5,9 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{devops@bblog.lowkeysoftware.com}
-role :web, %w{devops@bblog.lowkeysoftware.com}
-role :db,  %w{devops@bblog.lowkeysoftware.com}
+role :app, %w{devops@blog.lowkeysoftware.com}
+role :web, %w{devops@blog.lowkeysoftware.com}
+role :db,  %w{devops@blog.lowkeysoftware.com}
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +15,7 @@ role :db,  %w{devops@bblog.lowkeysoftware.com}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'bblog.lowkeysoftware.com',
+server 'blog.lowkeysoftware.com',
         user: 'devops',
         roles: %w{web app db},
         ssh_options: {
