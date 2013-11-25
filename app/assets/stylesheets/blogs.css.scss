@@ -14,6 +14,10 @@ $fieldSize: 60%;
   }
 }
 
+.something {
+  width: 200px;
+}
+
 // ---- index blog display ----
 #blogs {
   width: 850px;
@@ -27,7 +31,7 @@ $fieldSize: 60%;
     height: 170px;
     margin: 20px auto;
   }
-  .new_post_link { 
+  .new_post_link {
     float: right;
     margin-right: 10px;
   }
@@ -65,14 +69,14 @@ $fieldSize: 60%;
       font-size: 12px;
     }
   }
-  
-  a { 
+
+  a {
     color: $blogGray;
-    text-decoration: none; 
+    text-decoration: none;
   }
-  a:hover { 
+  a:hover {
     border-bottom: 1px dotted $blogGray;
-    color: black; 
+    color: black;
   }
 }
 
