@@ -1,137 +1,137 @@
 @media print {
-	#resume { margin-top: -15; }
-	#version { display: none;}
-	a[href]:after{
+  #resume { margin-top: -15; }
+  #version { display: none;}
+  a[href]:after{
     content: "";
   }
 }
 
 @media screen{
-	#resume { margin: 50px auto 64px; }
+  #resume { margin: 50px auto 64px; }
 }
 
 #resume {
-	clear: both;
-	width: 850px;
-	*{margin:0;}
+  clear: both;
+  width: 850px;
+  *{margin:0;}
 
-	#version{
-		font: 0.75em Georgia, Serif;
-		position: fixed;
-		right: 0;
-		bottom: 0;
-	}
+  #version{
+    font: 0.75em Georgia, Serif;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
 
 
-	dd.clear {
-		float: none;
-		margin: 0;
-		height: 10px;
-	}
+  dd.clear {
+    float: none;
+    margin: 0;
+    height: 10px;
+  }
 
-	#qr_code {
-		float: right;
-		margin: 70px 10px;
-	}
-	#name{
-		margin-bottom: 10px;
-		padding-left: 25px;
-		font-size: 3em;
-		font-weight: bold;
-		letter-spacing: -2px;
-		border-bottom: 1px solid #999;
-	}
-	#contact-info {
-		margin-bottom: 10px;
-		line-height: 1em;
-		p { margin-bottom: 10px;}
-	}
-	.contact-detail {
-		font-style: italic;
-		font-weight: bold;
-		text-align: right;
-		padding: 0 10px 0 0;
-		width: 75px;
-		float: left;
-	}
-	p#objective {
-		width: 75%;
-		float: left;
-		font-family: Georgia, Serif;
-		font-style: italic;
-		color: #666;
-		margin: 0 0 15px 0;
-		line-height: 1.5em;
-	}
-	dt.section-title {
-		clear: both;
-		font-style: italic;
-		font-weight: bold;
-		font-size: 1em;
-		text-align: right;
-		padding: 0 25px 0 0;
-		width: 125px;
-		float: left;
-		height: 50px;
-	}
-	dd.section {
-		width: 675px;
-		float: right;
-		border-left: 1px solid #999;
-		margin-bottom: 15px;
-	}
-	.entry {
-		padding-left: 25px;
-		margin-bottom: 10px;
-	}
-	div.entry:last-child {
-		margin: 0;
-	}
-	.entry-head {
-		margin-bottom: 4px;
-		position: relative;
-		font-family: Georgia, Serif;
-		font-size: 1em;
-		color: #999;
-	}
-	.org {
-		font-size: 1.125em;
-		color: #aaa;
-		font-weight: bold;
-	}
-	.location {
-		width: 150px;
-		text-align: right;
-		font-style: italic;
-		position: absolute;
-		bottom: 0;
-		right: 120px;
-	}
-	.title  {
-		font-style: italic;
-		font-weight: normal;
-		margin: 0 10px;
-	}
-	.date {
-		position: absolute;
-		text-align: right;
-		width: 100px;
-		bottom: 0;
-		right: 0;
-	}
-	ul.wins {
-		margin-left: 25px;
-	}
-	.win {
-		line-height: 1.25em;
-	}
-	a {
-		color: #999;
-		text-decoration: none;
-		border-bottom: 1px dotted #999;
-	}
-	a:hover {
-		border-bottom-style: solid;
-		color: black;
-	}
+  #qr_code {
+    float: right;
+    margin: 70px 10px;
+  }
+  #name{
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border-bottom: 1px solid #999;
+  }
+  #contact-info {
+    margin-bottom: 10px;
+    line-height: 1em;
+    p { margin-bottom: 10px;}
+  }
+  .contact-detail {
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 10px 0 0;
+    width: 75px;
+    float: left;
+  }
+  p#objective {
+    width: 75%;
+    float: left;
+    font-family: Georgia, Serif;
+    font-style: italic;
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.5em;
+  }
+  dt.section-title {
+    clear: both;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: right;
+    padding: 0 25px 0 0;
+    width: 125px;
+    float: left;
+    height: 50px;
+  }
+  dd.section {
+    width: 675px;
+    float: right;
+    border-left: 1px solid #999;
+    margin-bottom: 15px;
+  }
+  .entry {
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+  div.entry:last-child {
+    margin: 0;
+  }
+  .entry-head {
+    margin-bottom: 4px;
+    position: relative;
+    font-family: Georgia, Serif;
+    font-size: 1em;
+    color: #999;
+  }
+  .org {
+    font-size: 1.125em;
+    color: #aaa;
+    font-weight: bold;
+  }
+  .location {
+    width: 150px;
+    text-align: right;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+  }
+  .title  {
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 10px;
+  }
+  .date {
+    position: absolute;
+    text-align: right;
+    width: 100px;
+    bottom: 0;
+    right: 0;
+  }
+  ul.wins {
+    margin-left: 25px;
+  }
+  .win {
+    line-height: 1.25em;
+  }
+  a {
+    color: #999;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+  }
+  a:hover {
+    border-bottom-style: solid;
+    color: black;
+  }
 } //end #resume
