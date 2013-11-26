@@ -1,6 +1,9 @@
 @media print {
 	#resume { margin-top: -15; }
 	#version { display: none;}
+	a[href]:after{
+    content: "";
+  }
 }
 
 @media screen{
