@@ -19,6 +19,10 @@ $fieldSize: 60%;
   width: 850px;
   margin: 50px auto;
 
+  .pagination a {
+    color: #BBB;
+  }
+
   #blog_list_header {
     background-color: #000;
     background-image: url("/assets/header_CatBaIsland_panorama.jpg");

@@ -1,9 +1,15 @@
 <div id="blogs">
   <div id="blog_list_header"></div>
+  <div id="select_page" class="center">
+    <%= paginate @blogs %>
+  </div>
   <%= link_to 'New Blog', new_blog_path, class: 'new_post_link' if logged_in? %>
   <div id="blog_list">
     <% @blogs.each do |blog| %>
       <%= render blog %>
     <% end %>
+  </div>
+  <div id="blog_list_footer" class="center">
+    <%= paginate @blogs %>
   </div>
 </div>

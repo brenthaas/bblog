@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
   end
 
   # GET /blogs/1
@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit 
+  # GET /blogs/1/edit
   def edit
     @blog = Blog.find(params[:id])
   end

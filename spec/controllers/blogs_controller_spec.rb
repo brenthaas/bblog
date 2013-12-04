@@ -1,8 +1,9 @@
 require 'spec_helper'
 
-describe BlogsController do 
-  let!(:blog) { FactoryGirl.create(:blog) }
-  
+describe BlogsController do
+  let!(:blogs) { FactoryGirl.create_list(:blog, 7) }
+  let!(:blog) { blogs.first }
+
   context "user logged in" do
     before { logged_in }
 
@@ -25,6 +26,13 @@ describe BlogsController do
     it "redirects to blog list when getting edit" do
       get :edit, :id => blog.id
       response.should redirect_to(blogs_path)
+    end
+  end
+
+  describe "GET /blogs (index)" do
+    it "paginates 5 blogs by default" do
+      get :index
+      assigns(:blogs).length.should == 5
     end
   end
 end

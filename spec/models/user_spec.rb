@@ -37,10 +37,6 @@ describe User do
   end
 
   context "passwords are required" do
-    it 'should not accept a password of ""' do
-      @user.password = @user.password_confirmation = ""
-      should_not be_valid
-    end
     it "should not accept a nil password" do
       @user.password = @user.password_confirmation = nil
     end

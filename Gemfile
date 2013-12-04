@@ -8,6 +8,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+gem 'kaminari'
 
 gem 'jquery-rails'
 
