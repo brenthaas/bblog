@@ -8,7 +8,8 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
-gem 'kaminari'
+gem 'libv8', '~> 3.16.14.7'
+gem 'kaminari', '~> 0.16.3'
 
 gem 'jquery-rails'
 
@@ -22,10 +23,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 2.4.0'
   gem 'rspec-rails'
-end
-
-group :test, :development do
-  gem 'jazz_hands'
 end
 
 group :development do
