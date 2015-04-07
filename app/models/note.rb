@@ -1,5 +1,5 @@
 class Note < ActiveRecord::Base
-  attr_accessible :content, :title
+  attr_accessor :content, :title
 
   validates_presence_of :title, :content
 end

@@ -1,12 +1,12 @@
 class Blog < ActiveRecord::Base
-  attr_accessible :content, :location, :posting_date, :title
+  attr_accessor :content, :location, :posting_date, :title
   belongs_to :user
 
   validates :user_id, presence: true
 
   before_save { self.posting_date ||= Time.now.to_date }
 
-  default_scope order: 'blogs.posting_date DESC'
+  default_scope -> { order('blogs.posting_date DESC') }
 end
 # == Schema Information
 #

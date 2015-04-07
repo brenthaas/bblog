@@ -12,7 +12,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :username,
+  attr_accessor :name, :username,
       :password_digest, :password, :password_confirmation,
       :token
 

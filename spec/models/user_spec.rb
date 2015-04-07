@@ -33,7 +33,9 @@ describe User do
   describe "token creation" do
     before { @user.save }
 
-    its(:token) {should_not be_empty}
+    it "is not empty" do
+      expect(:token).not_to be_empty
+    end
   end
 
   context "passwords are required" do

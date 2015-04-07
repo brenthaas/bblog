@@ -1,16 +1,16 @@
 Bblog::Application.routes.draw do
   # Static Pages
-  match "home", to: "blogs#index"
-  match "about", to: "static_pages#about"
+  get "home", to: "blogs#index"
+  get "about", to: "static_pages#about"
   root to: "blogs#index"
 
   # Authentication actions
-  match 'sessions', to: 'sessions#create', via: :post
-  match 'login', to: 'sessions#new', via: :get
-  match 'logout', to: 'sessions#destroy', via: :delete
+  post 'sessions', to: 'sessions#create'
+  get 'login', to: 'sessions#new'
+  delete 'logout', to: 'sessions#destroy'
 
   # User
-  match "users/:id", to: "users#show", as: :user
+  get "users/:id", to: "users#show", as: :user
 
   resources :blogs
   resources :notes
