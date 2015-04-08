@@ -54,9 +54,9 @@
     width: 75px;
     float: left;
   }
-  p#objective {
-    width: 75%;
-    float: left;
+  #objective {
+    width: 65%;
+    float: right;
     font-family: Georgia, Serif;
     font-style: italic;
     color: #666;
@@ -75,13 +75,13 @@
     height: 50px;
   }
   dd.section {
-    width: 675px;
+    width: 690px;
     float: right;
     border-left: 1px solid #999;
     margin-bottom: 15px;
   }
   .entry {
-    padding-left: 25px;
+    padding-left: 15px;
     margin-bottom: 10px;
   }
   div.entry:last-child {
