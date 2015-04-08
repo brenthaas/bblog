@@ -120,6 +120,12 @@
     bottom: 0;
     right: 0;
   }
+  ul.buzz-words {
+    list-style: none;
+    li {
+      display: inline;
+    }
+  }
   ul.wins {
     margin-left: 25px;
   }
