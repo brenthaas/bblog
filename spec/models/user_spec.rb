@@ -14,12 +14,13 @@
 require 'spec_helper'
 
 describe User do
-  before do
-    @user = User.create( name: 'Test User',
-                        username: 'testuser',
-                        password: 'foobar', password_confirmation: 'foobar' )
+  let(:password) { 'foobar' }
+  subject do
+    User.create( name: 'Test User',
+                 username: 'testuser',
+                 password: password,
+                 password_confirmation: password )
   end
-  subject { @user }
 
   it { should be_valid }
   it { should respond_to(:name) }
@@ -30,90 +31,50 @@ describe User do
   it { should respond_to(:authenticate) }
   it { should respond_to(:token) }
 
-  describe "token creation" do
-    before { @user.save }
+  describe "passwords" do
 
-    its(:token) {should_not be_empty}
-  end
-
-  context "passwords are required" do
-    it "should not accept a nil password" do
-      @user.password = @user.password_confirmation = nil
-    end
-  end
-
-  specify "passwords must match" do
-    @user.password_confirmation = "different"
-    should_not be_valid
-  end
-
-  describe "user authentication" do
-    before { @user.save }
-    let(:found_user) { User.find_by_username(@user.username) }
-
-    it "should authenticate with a matching password" do
-      @user.should == found_user.authenticate(@user.password)
+    it "creates a token" do
+      expect(subject.token).to be_present
     end
 
-    context "with wrong password given" do
-      let(:with_invalid_pass) { found_user.authenticate("wrongPass") }
-      it "should not return the user" do
-        @user.should_not == with_invalid_pass
+    context "passwords are required" do
+      it "should not accept a nil password" do
+        subject.password = subject.password_confirmation = nil
       end
-      it "should return false as a failure" do
-        with_invalid_pass.should == false
+    end
+
+    specify "passwords must match" do
+      subject.password_confirmation = "different"
+      expect(subject).to_not be_valid
+    end
+
+    describe "user authentication" do
+      let(:found_user) { User.find_by_username(subject.username) }
+
+      it "should authenticate with a matching password" do
+        expect(found_user.authenticate(password)).to eq subject
+      end
+
+      context "with wrong password given" do
+        it "should not return the user" do
+          expect(found_user.authenticate('wrong')).to eq false
+        end
       end
     end
   end
 
   describe "field validation" do
+
     specify "name must be given" do
-      @user.name = ""
-      should_not be_valid
+      expect(subject).to validate_presence_of(:name)
     end
+
     specify "username must be given" do
-      @user.username = ""
-      should_not be_valid
-    end
-    specify "passwords must be 6 characters long" do
-      @user.password = @user.password_confirmation = "12345"
-    end
-    describe "duplication" do
-      before do
-        @user.save!
-        @newuser = FactoryGirl.create(:user)
-      end
-      it "unique fields are fine" do
-        @newuser.should be_valid
-      end
-      it "duplicate usernames cannot be used" do
-        @newuser.username = @user.username
-        @newuser.should_not be_valid
-      end
+      expect(subject).to validate_presence_of(:username)
     end
 
-    describe "blog entries" do
-      context "created out of order" do
-        # first created current post
-        let!(:new_post) do
-          FactoryGirl.create(:blog, user: @user,
-            posting_date: 2.days.ago, created_at: 2.days.ago )
-        end
-        # newer creation, but old post
-        let!(:old_post) do
-          FactoryGirl.create(:blog, user: @user,
-            posting_date: 1.week.ago, created_at: Date.yesterday)
-        end
-        # created now - should be first
-        let!(:newest_post) do
-          FactoryGirl.create(:blog, user: @user,
-            posting_date: Time.now, created_at: Time.now)
-        end
-
-        it "will list newest first by posting_date" do
-          @user.blogs.should == [newest_post, new_post, old_post]
-        end
-      end
+    specify "username must be unique" do
+      expect(subject).to validate_uniqueness_of(:username)
     end
   end
 end
