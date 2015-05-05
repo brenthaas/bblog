@@ -19,6 +19,12 @@ gem 'unicorn'
 
 gem 'mysql2'
 
+gem 'pry-rails'
+
+group :development, :test do
+  gem 'pry-byebug'
+end
+
 group :test do
   gem 'capybara'
   gem 'launchy'
