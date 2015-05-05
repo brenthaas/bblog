@@ -23,12 +23,12 @@ gem 'pry-rails'
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'capybara'
   gem 'launchy'
-  gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 2.4.0'
   gem 'rspec-rails'
 end
